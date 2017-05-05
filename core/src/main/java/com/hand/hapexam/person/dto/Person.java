@@ -35,6 +35,7 @@ public class Person extends BaseDTO {
 
       private Long functionSequence;
 
+<<<<<<< HEAD
     public Person(String name, String telephone, String email, String address, String gender) {
        this.name = name;
        this.telephone = telephone;
@@ -48,6 +49,10 @@ public class Person extends BaseDTO {
     }
 
     public void setId(Long id){
+=======
+
+     public void setId(Long id){
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
          this.id = id;
      }
 

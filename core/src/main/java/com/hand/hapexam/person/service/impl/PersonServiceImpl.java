@@ -2,17 +2,23 @@ package com.hand.hapexam.person.service.impl;
 
 import com.hand.hap.system.service.impl.BaseServiceImpl;
 import com.hand.hapexam.person.mapper.PersonMapper;
+<<<<<<< HEAD
 
 import jxl.Sheet;
 import jxl.Workbook;
+=======
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.hand.hapexam.person.dto.Person;
 import com.hand.hapexam.person.service.IPersonService;
 import org.springframework.transaction.annotation.Transactional;
 
+<<<<<<< HEAD
 import java.io.File;
 import java.util.ArrayList;
+=======
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
 import java.util.List;
 
 @Service
@@ -26,6 +32,7 @@ public class PersonServiceImpl extends BaseServiceImpl<Person> implements IPerso
         personList.forEach(fruit -> checkOvn(personMapper.myUpdate(fruit),fruit));
         return  personList.size();
     }
+<<<<<<< HEAD
 
     @Override
     public List<Person> getAllByExcel(String file) {
@@ -58,4 +65,6 @@ public class PersonServiceImpl extends BaseServiceImpl<Person> implements IPerso
         return list;
 
     }
+=======
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
 }

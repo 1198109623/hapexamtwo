@@ -1,7 +1,10 @@
 package com.hand.hapexam.person.controllers;
 
+<<<<<<< HEAD
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+=======
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
 import org.springframework.stereotype.Controller;
 import com.hand.hap.system.controllers.BaseController;
 import com.hand.hap.core.IRequest;
@@ -13,12 +16,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+<<<<<<< HEAD
 import sun.misc.Request;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+=======
+import javax.servlet.http.HttpServletRequest;
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
 import java.util.List;
 
     @Controller
@@ -49,6 +56,7 @@ import java.util.List;
         service.batchDelete(dto);
         return new ResponseData();
     }
+<<<<<<< HEAD
 
         @RequestMapping(value = "/person/excel")
         public void Excel(HttpServletResponse response, HttpServletRequest request){
@@ -76,4 +84,6 @@ import java.util.List;
                 e.printStackTrace();
             }
         }
+=======
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
     }

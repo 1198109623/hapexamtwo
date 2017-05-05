@@ -1,6 +1,7 @@
 <#include "../include/header.html">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.4.0/jszip.js"></script>
 
+<<<<<<< HEAD
     <script src="${base.contextPath}/common/code?employeeGenderData=HR.EMPLOYEE_GENDER" type="text/javascript"></script>
 
     <script src="${base.contextPath}/lib/kendoui/js/jszip.min.js"></script>
@@ -50,6 +51,11 @@
                 }, "json");
             }
 
+=======
+    <script src="//cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+    <script type="text/javascript">
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
         var viewModel = kendo.observable({
             model: {},
             createFunction: function () {
@@ -77,6 +83,7 @@
             <span class="btn btn-success k-grid-save-changes" data-bind="click:saveFunction" style="float:left;margin-right:5px;"><@spring.message "hap.save"/></span>
             <span onclick="deleteData()" class="btn btn-danger" style="float:left;margin-right:5px;"><@spring.message "hap.delete"/></span>
             <span class="btn btn-primary" style="float:left;margin-right:5px;" data-bind="click:exportExcelFunctionBefor"><@spring.message "excelexport"/></span>
+<<<<<<< HEAD
 
             <div class="k-button k-upload-button k-button-icon k-toolbar-first-visible" style="visibility: visible;">
             <span class="k-icon k-font-icon k-i-folder-open" >
@@ -86,6 +93,10 @@
 
             <span class="btn btn-primary" style="float:left;margin-left:5px;"
                   onclick="upload()"><i class="fa fa-file-excel-o" style="margin-right:3px;"></i><@spring.message "excelimport"/></span>
+=======
+            <span class="btn btn-primary" style="float:left;margin-left:5px;"
+                  data-bind="click:importExcelFunction"><i class="fa fa-file-excel-o" style="margin-right:3px;"></i><@spring.message "excelimport"/></span>
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
         </div>
         <script>kendo.bind($('#toolbar-btn'), viewModel);</script>
         <div class="pull-right" id="query-form" style="padding-bottom:10px;">
@@ -106,6 +117,12 @@
     <div id="email"></div>
 
     <script type="text/javascript">
+<<<<<<< HEAD
+=======
+        var massage;
+
+
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
 
 
         //增删改查
@@ -160,7 +177,94 @@
             }
         });
 
+<<<<<<< HEAD
 
+=======
+//        $("#Grid").kendoGrid({
+//            dataSource: dataSource,
+//            height: '100%',
+//            resizable: true,
+//            scrollable: true,
+//            navigatable: false,
+//            selectable: 'multiple, rowbox',
+//            pageable: {
+//                pageSizes: [5, 10, 20, 50],
+//                refresh: true,
+//                buttonCount: 5
+//            },
+//            columns: [
+//                /*{
+//                 field: "id",
+//                 title: '<@spring.message "Person.id"/>',
+//                 width: 120
+//                 },*/
+//                {
+//                    field: "name",
+//                    title: '<@spring.message "Person.name"/>',
+//                    width: 120
+//                },
+//                {
+//                    field: "telephone",
+//                    title: '<@spring.message "Person.telephone"/>',
+//                    width: 120
+//                },
+//                {
+//                    field: "email",
+//                    title: '<@spring.message "Person.email"/>',
+//                    width: 120
+//                },
+//                {
+//                    field: "address",
+//                    title: '<@spring.message "Person.address"/>',
+//                    width: 120
+//                },
+//
+//                {
+//                    field: "gender",
+//                    title: '<@spring.message "Person.gender"/>',
+//                    width: 120
+//                },
+//                {
+//                    field: "qrcode",
+//                    title: '<@spring.message "qrcode"/>',
+//                    width: 120,
+//                    template: function (rowdata) {
+//                        if (!!rowdata.phone) {
+//                            return '<a href="javascript:void(0);" onclick="ewm('+rowdata.phone +')"> <@spring.message "点击扫一扫"/></a>'
+//                        }
+//                        return ' ';
+//                    },
+//                    attributes: {style: "text-align:center"},
+//                    headerAttributes: { style: "text-align:center"}
+//                },
+//                {
+//                    title: '<@spring.message "地图"/>',
+//                    width: 50,
+//                    template: function (rowdata) {
+//                        if (!!rowdata.address) {
+//                            return '<a href="javascript:void(0);" onclick="map(\' '+rowdata.address + '\')"> <@spring.message "查看"/></a>'
+//                        }
+//                        return ' ';
+//                    },
+//                    attributes: {style: "text-align:center"},
+//                    headerAttributes: { style: "text-align:center"}
+//                },
+//                {
+//                    title: '<@spring.message "发送邮件"/>',
+//                    width: 50,
+//                    template: function (rowdata) {
+//                        if (!!rowdata.email) {
+//                            return '<a href="javascript:void(0);" onclick="sendEmail(\' '+rowdata.email + '\')"> <@spring.message "send"/></a>'
+//                        }
+//                        return ' ';
+//                    },
+//                    attributes: {style: "text-align:center"},
+//                    headerAttributes: { style: "text-align:center"}
+//                }
+//            ],
+//            editable: true
+//        });
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
 
         var grid = $("#Grid").kendoGrid({
             dataSource: dataSource,
@@ -204,7 +308,11 @@
                 },
 
                 {
+<<<<<<< HEAD
                         field: "telephone",
+=======
+                    field: "telephone",
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
                     title: '<@spring.message "Person.telephone"/>',
                     width: 120,
                     attributes: {style: "text-align:center"},
@@ -290,6 +398,7 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     title: '<@spring.message "qrcode"/>',
                     width: 50,
                     template: function (rowdata) {
@@ -300,6 +409,19 @@
                     },
                     attributes: {style: "text-align:center"},
                     headerAttributes: { style: "text-align:center"}
+=======
+                      title: '<@spring.message "qrcode"/>',
+                      width: 50,
+                      template: function (rowdata) {
+                      if (!!rowdata.phone) {
+                      return '<a href="javascript:void(0);" onclick="ewm('+rowdata.phone +')"> <@spring.message "扫一扫"/></a>'
+                             }
+                        return ' ';
+                       },
+
+                      attributes: {style: "text-align:center"},
+                      headerAttributes: { style: "text-align:center"}
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
                 },
                 {
                     title: '<@spring.message "map"/>',
@@ -350,7 +472,11 @@
 
 
         function ewm(phone){
+<<<<<<< HEAD
             var url = "${base.contextPath}/person/tcode.html?phone="+phone+"";
+=======
+            var url = "${base.contextPath}/person/tcode.html?phone="+phone+"" ;
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
             var dialog = $("#ewm").kendoWindow({
                 actions: ["Close"],
                 width  : 200,
@@ -366,7 +492,10 @@
             }).data("kendoWindow");
             dialog.center().open();
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
         function map(address){
             var url = "${base.contextPath}/person/map.html?address="+address+"" ;
             var dialog = $("#map").kendoWindow({
@@ -400,8 +529,12 @@
                 }
             }).data("kendoWindow");
             dialog.center().open();
+<<<<<<< HEAD
           }
 
+=======
+        }
+>>>>>>> 99a32cf3dbe2862262b795f13c8c21c22660794c
 
     </script>
     </body>
